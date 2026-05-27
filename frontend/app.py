@@ -1017,7 +1017,7 @@ for _k, _v in _defaults.items():
 # ============================================================
 # API BASE URL
 # ============================================================
-API_URL = https://smart-gatepass-system-1.onrender.com
+API_URL = "https://smart-gatepass-system-1.onrender.com"
 
 def api_get(endpoint: str):
     """GET request to backend. Returns parsed JSON or None on error."""
