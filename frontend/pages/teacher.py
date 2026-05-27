@@ -382,10 +382,9 @@ def show_logs(api_get):
     for log in logs:
         icon = icon_map.get(log["action"], "📝")
         st.markdown(f"""
-        <div style="background:#f8f9fa;padding:8px 12px;border-radius:6px;
-                    margin:4px 0;border-left:3px solid #3949ab;font-size:0.9em;">
+        <div class="activity-log-item">
             {icon} <strong>{log['action']}</strong>
             — {log.get('details', '')}
-            <span style="color:#888;float:right;">{str(log['logged_at'])[:16]}</span>
+            <span class="log-time">{str(log['logged_at'])[:16]}</span>
         </div>
         """, unsafe_allow_html=True)
