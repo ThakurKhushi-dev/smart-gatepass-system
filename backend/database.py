@@ -9,7 +9,7 @@ from datetime import datetime
 # ============================================================
 # DATABASE CONNECTION
 # ============================================================
-DATABASE_URL = "mysql+pymysql://root:khushi%402706@localhost:3306/gatepass_db"
+DATABASE_URL = "mysql+pymysql://root:KmQnLShIEdlMyhjdXwezHifzTWWIbBWD@zephyr.proxy.rlwy.net:24427/railway"
 
 engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
