@@ -8,9 +8,8 @@ from datetime import datetime
 
 # ============================================================
 # DATABASE CONNECTION
-# Change username / password / host to match your MySQL setup
 # ============================================================
-DATABASE_URL = "mysql+pymysql://root:KmQnLShIEdlMyhjdXwezHifzTWWIbBWD@mysql.railway.internal:3306/railway"
+DATABASE_URL = "mysql+pymysql://root:khushi%402706@localhost:3306/gatepass_db"
 
 engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
