@@ -1022,7 +1022,7 @@ API_URL = "https://smart-gatepass-system-1.onrender.com"
 def api_get(endpoint: str):
     """GET request to backend. Returns parsed JSON or None on error."""
     try:
-        r = http_requests.get(f"{API_URL}{endpoint}", timeout=5)
+        r = http_requests.get(f"{API_URL}{endpoint}", timeout=30)
         return r.json() if r.status_code == 200 else None
     except Exception:
         return None
@@ -1031,7 +1031,7 @@ def api_get(endpoint: str):
 def api_post(endpoint: str, data: dict):
     """POST request to backend. Returns (parsed_json, status_code)."""
     try:
-        r = http_requests.post(f"{API_URL}{endpoint}", json=data, timeout=5)
+        r = http_requests.post(f"{API_URL}{endpoint}", json=data, timeout=30)
         return r.json(), r.status_code
     except Exception as e:
         return {"detail": str(e)}, 500
