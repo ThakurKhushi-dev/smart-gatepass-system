@@ -12,22 +12,22 @@ import io
 import base64
 import json
 
-from database import get_db, engine, Base, User, Request, Approval, Log, Attendance
-from schemas import (
+from backend.database import get_db, engine, Base, User, Request, Approval, Log, Attendance
+from backend.schemas import (
     LoginRequest, LoginResponse,
     UserCreate, UserResponse,
     GatepassCreate, GatepassResponse,
     ApprovalCreate, ApprovalResponse,
     AttendanceResponse, GateAction
 )
-from auth import hash_password, verify_password, create_access_token
+from backend.auth import hash_password, verify_password, create_access_token
 
 # ============================================================
 # CREATE TABLES ON STARTUP
 # ============================================================
 Base.metadata.create_all(bind=engine)
-from database import SessionLocal
-from database import User
+from backend.database import SessionLocal
+from backend.database import User
 from passlib.context import CryptContext
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
